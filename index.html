@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fyle-Github_Repo_Disp</title>
+    <link rel="stylesheet" href="styles.css" class="styles" />
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <header class="populate">
+      <div class="overlap-group">
+        <img class="github-logo img-fluid" src="assets/Logo/githublogo.png" />
+        <div class="challenge">Fyle Website Development Challenge</div>
+      </div>
+      <div class="editables">
+        <input class="form-control input-container"" id="username"
+        placeholder="Type Username" type="text"
+        autocomplete="organization-title" />
+
+        <button class="btn input-container" id="user-search">Search</button>
+      </div>
+    </header>
+
+    <!-- User Details are here -->
+    <main>
+      <div id="user-description" class="profile"></div>
+
+      <!-- number of pages -->
+      <div class="repo-re-structure-container ">
+        <label id="pages-label" class="input-box-label " for="pages"
+          >Repositories Pages:</label
+        >
+        <input
+          class="form-control input-container"
+          type="number"
+          id="repos-per-pages"
+          min="10"
+          max="1000"
+          value="10"
+        />
+        <button id="rep-re-structure" class="btn input-container">Re-structure</button>
+      </div>
+
+      <!-- search button -->
+      <div class="search-container">
+        <input
+          class="form-control input-container"
+          id="search-bar"
+          placeholder="Search for the repository"
+          type="text"
+          autocomplete="organisation-title"
+        />
+
+        <button class="btn input-container" id="repo-search">Search</button>
+      </div>
+
+      <!-- repositories list -->
+      <div id="repo-list" class="repo-container"></div>
+
+      <div class="pagination-container">
+        <!-- text-center -->
+        <button class="pagination-button btn" onclick="prevPage()">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <span>Page: <span id="currentPage">1</span></span>
+        <button class="pagination-button btn" onclick="nextPage()">
+          <i class="fa-solid fa-forward"></i>
+        </button>
+      </div>
+      <!-- </div> -->
+    </main>
+  </body>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+
+  <script
+    src="https://kit.fontawesome.com/2016f384be.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
